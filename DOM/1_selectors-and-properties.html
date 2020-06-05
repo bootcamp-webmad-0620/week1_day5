@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="title1" class="clase-inicial-primera clase-inicial-segunda">Contenido inicial</h1>
+    <h2 id="title2">Contenido secundario</h2>
+
+    <p class="paragraph">Soy el primer párrafo</p>
+    <p class="paragraph">Soy el segundo párrafo</p>
+    <p class="paragraph">Soy un párrafo</p>
+
+    <h5 class="subtitle">Soy un subtítulo</h5>
+
+
+    <script>
+
+        // Selectors
+        const title = document.querySelector('h1')                  // Returns node
+        console.log({ title })                                      // Check properties on console yay!
+
+        const paragraphs = document.querySelectorAll('.paragraph')  // Returns NodeList (array)
+        console.log({ paragraphs })
+
+
+        // Access nodes properties (getter)
+        console.log('El título:', title.innerText)
+        console.log('EL nombre del nodo:', title.nodeName)
+        console.log('El ancho:', title.offsetWidth)
+
+
+        // Access nodes properties (setter)
+        // title.innerText = 'Vengo desde el script, <em>¡merluzo!</em>'    ===> NOPE! .innerText does not render tags
+        title.innerHTML = 'Vengo desde el script, <em>¡merluzo!</em>'
+        title.style.color = 'red'
+        title.id = 'soyElIdDelScript'
+
+
+        // Node array access
+        // paragraphs.style.color = 'red'  ===> NOPE! This is a NodeList (array), not an object
+        paragraphs.forEach(elm => {
+            elm.style.color = 'blue'
+            elm.innerText = 'Este texto no es el incial :3'
+        })
+
+
+        // Class managing with .className (ugh, overwrites everything)
+        // title.className = 'soy-una-clase-que-vengo-del-script'
+
+        // Class managing with .classList (yay!)
+        console.log('Las clases iniciales del nodo eran:', title.className)
+        title.classList.add('nueva-clase')
+        title.classList.remove('clase-inicial-primera')
+        // title.classList.toggle('clase-a-cambiar')
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Haz click en los botones</h1>
+    <button>HAZME CLICK</button>
+    <button>HAZME CLICK</button>
+    <button>HAZME CLICK</button>
+    <button>HAZME CLICK</button>
+    <button>HAZME CLICK</button>
+
+
+    <hr>
+
+    <h2>Formulario</h2>
+    <input type="text" id="orderNumber">
+    <button>Comprobar</button>
+    <p>El número de pedido es <span>XXX</span></p>
+
+    <script>
+
+
+        // Single object interaction
+
+        // const button = document.querySelector('button')
+
+        // button.onclick = () {
+        //     console.log('clickado!')
+        // }
+
+        // button.onclick = () => console.log('clickado!')
+
+
+
+
+
+        // Many objects interaction
+        const buttons = document.querySelectorAll('button')
+
+        buttons.forEach(function (elm) {
+            elm.onclick = function () {
+                document.querySelector('h1').style.color = 'red'
+            }
+        })
+
+
+
+        // Practice!
+        document.querySelectorAll('button')[5].onclick = () => {
+
+            // value properti has access to input's content
+            const text = document.querySelector('#orderNumber').value
+            console.log("El valor del inoput es", text)
+            document.querySelector('p span').textContent = text
+        }
+
+
+    </script>
+</body>
+
+</html>

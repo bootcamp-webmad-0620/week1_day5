@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+
+        class Person {
+
+            constructor(par1, par2, par3, par4) {
+                this.name = par1
+                this.age = par2
+                this.celiac = par3
+                this.phone = par4
+            }
+
+            grow(number) {
+                this.age += number
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        const person1 = new Person('Ger', 33, false, '638363849')
+        const person2 = new Person('Alba', 31, true, '63847409849')
+
+        person1.grow(1)
+
+        console.log(`El nombre de la persona es ${person1.name}`)
+
+    </script>
+</body>
+
+</html>

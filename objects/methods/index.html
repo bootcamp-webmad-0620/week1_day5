@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const person = {
+            name: 'Ger',
+            birth: new Date(1986, 4, 23),
+            age: 33,
+            phone: '682739483',
+            address: {
+                street: 'García Luna',
+                number: 17,
+                postalCode: 28002
+            },
+            celiac: false,
+            hobbies: ['beer', 'sky', 'techno', 'memes'],
+            subscriptions: [
+                {
+                    name: 'Netflix',
+                    cost: 9.95
+                },
+                {
+                    name: 'HBO',
+                    cost: 9.95
+                },
+                {
+                    name: 'Sitepoint',
+                    cost: 3.90
+                }
+            ],
+            grow(number = 1) {
+                this.age += number
+            },
+            learnNewHobby(hobby) {
+                this.hobbies.push(hobby)
+            },
+            addSubscription(service) {
+                this.subscriptions.push(service)
+            }
+        }
+
+
+
+        console.log(`La persona tiene ${person.age} años`)
+        person.grow(2)
+        console.log(`La persona tiene ${person.age} años`)
+
+
+        console.log(`El teléfono de la persona es ${person.phone}`)
+        person.learnNewHobby('Casino')
+        console.log(`A la persona le gusta ${person.hobbies}`)
+
+
+        console.log(`La persona tiene estas suscripciones: ${person.subscriptions}`)
+        const newSubscription = { name: 'Sky TV', cost: 5.2 }
+        person.addSubscription(newSubscription)
+        console.log(`La persona tiene estas suscripciones: ${person.subscriptions}`)
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

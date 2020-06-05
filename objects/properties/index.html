@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const person = {
+            name: 'Ger',
+            birth: new Date(1986, 4, 23),
+            address: {
+                street: 'García Luna',
+                number: 17,
+                postalCode: 28002
+            },
+            celiac: false,
+            hobbies: ['beer', 'sky', 'techno', 'memes'],
+            subscriptions: [
+                {
+                    name: 'Netflix',
+                    cost: 9.95
+                },
+                {
+                    name: 'HBO',
+                    cost: 9.95
+                },
+                {
+                    name: 'Sitepoint',
+                    cost: 3.90
+                }
+            ]
+        }
+
+
+        console.log(person)
+        person.subscriptions.forEach(elm => console.log(`La suscripción a ${elm.name} tiene un coste de ${elm.cost}`))
+
+
+
+        // Opeators
+        console.log('¿Existe address en person?:', 'address' in person)
+        delete person.celiac
+
+
+
+        // Lists in objects
+        const properties = Object.keys(person)
+        const values = Object.values(person)
+        console.log('Las propiedades son:', properties)
+        console.log('Los valores son:', values)
+
+
+
+        // Loops for objects
+        for (let key in person) {
+            console.log(`El valor de la propiedad ${key} es ${person[key]}`)
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
