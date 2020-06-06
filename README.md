@@ -1,5 +1,7 @@
 # week1_day5
 
+Vídeo de la clase [en este enlace](https://ironhack.zoom.us/rec/share/5I9PDprermNOWs_muWbxQaUTD4HLaaa8gCUZ__RczhpMsyGgAky9KnpwHFfVmvOy)
+
 
 ## Contenidos
 
